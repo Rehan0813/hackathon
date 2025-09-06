@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Task Card Styles */
+.task-card {
+    @apply bg-white border-2 border-purple-200 rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow;
+}
+
+/* Label Badge Styles */
+.label-badge {
+    @apply px-3 py-1 rounded-full text-xs font-medium cursor-pointer hover:opacity-80 transition-opacity;
+}
+
+.label-feedback { 
+    background-color: #dcfce7 !important; 
+    color: #166534 !important; 
+    border: 1px solid #bbf7d0;
+}
+
+.label-refactor { 
+    background-color: #fef2f2 !important; 
+    color: #dc2626 !important; 
+    border: 1px solid #fecaca;
+}
+
+.label-improvement { 
+    background-color: #dcfce7 !important; 
+    color: #166534 !important; 
+    border: 1px solid #bbf7d0;
+}
+
+.label-payment { 
+    background-color: #fef2f2 !important; 
+    color: #dc2626 !important; 
+    border: 1px solid #fecaca;
+}
+
+.label-unsure { 
+    background-color: #fef2f2 !important; 
+    color: #dc2626 !important; 
+    border: 1px solid #fecaca;
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    @apply flex justify-center my-3;
+}
+
+.gallery-image {
+    @apply w-20 h-20 rounded border-2 border-purple-300 overflow-hidden;
+}
+
+.gallery-image img {
+    @apply w-full h-full object-cover;
+}
+
+/* Label Option Styles */
+.label-option {
+    @apply px-3 py-2 rounded-lg text-sm font-medium cursor-pointer hover:opacity-80 transition-opacity border-2;
+}
+
+.label-option.feedback {
+    @apply bg-green-100 text-green-800 border-green-300;
+}
+
+.label-option.refactor {
+    @apply bg-red-100 text-red-800 border-red-300;
+}
+
+.label-option.improvement {
+    @apply bg-green-100 text-green-800 border-green-300;
+}
+
+.label-option.payment {
+    @apply bg-red-100 text-red-800 border-red-300;
+}
+
+.label-option.unsure {
+    @apply bg-red-100 text-red-800 border-red-300;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    min-width: 120px;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #374151;
+}
+
+.dropdown-item:hover {
+    background-color: #f3f4f6;
+}
+
+.dropdown-item.delete {
+    color: #dc2626;
+}
+
+.dropdown-item.delete:hover {
+    background-color: #fef2f2;
+}
+
+.relative {
+    position: relative;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1f2937;
+    color: #f9fafb;
+}
+
+.dark-mode .task-card {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+}
+
+.dark-mode .modal-content {
+    background-color: #374151;
+    color: #f9fafb;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: #374151;
+    border-color: #4b5563;
+}
+
+.dark-mode .dropdown-item {
+    color: #f9fafb;
+}
+
+.dark-mode .dropdown-item:hover {
+    background-color: #4b5563;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-card {
+        @apply p-3;
+    }
+    
+    .gallery-image {
+        @apply w-16 h-16;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 16px;
+    }
+}
